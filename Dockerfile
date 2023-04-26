@@ -32,6 +32,7 @@ RUN mkdir -p /var/run/sshd
 RUN sed -i 's|session    required     pam_loginuid.so|session    optional     pam_loginuid.so|g' /etc/pam.d/sshd
 
 COPY .ssh/authorized_keys /home/jenkins/.ssh/authorized_keys
+RUN chmod 600 /home/jenkins/.ssh/authorized_keys
 
 RUN chown -R jenkins:jenkins /home/jenkins/.m2/ && \
     chown -R jenkins:jenkins /home/jenkins/.ssh/
