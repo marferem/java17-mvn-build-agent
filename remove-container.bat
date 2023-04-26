@@ -1,0 +1,1 @@
+docker rm -f java17-mvn-build-agent
