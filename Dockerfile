@@ -23,6 +23,7 @@ RUN adduser jenkins &&                      \
 
 
 RUN dnf install -y openssh-server
+RUN dnf install -y git
 
 RUN mkdir -p /var/run/sshd
 
